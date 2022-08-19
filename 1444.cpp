@@ -1,0 +1,30 @@
+/* 1444 - Drakes' Racing */
+#include <stdio.h>
+
+int main()
+{
+    int n, r;
+
+    while(scanf("%d", &n) && n != 0)
+    {
+        r = 0;
+
+        while(n > 1)
+        {
+            if(n % 3 == 0)
+            {
+                r += n / 3;
+                n /= 3;
+            }
+            else
+            {
+                r += (n / 3) + 1;
+                n = (n / 3) + 1;
+            }
+        }
+
+        printf("%d\n", r);
+    }
+
+    return 0;
+}
